@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Volkorn');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Volkorn', sans-serif;
+
+  --color-light-grey: #e1dcea;
+  --color-light-blue: #9bb8d5;
+  --color-green-1: #9cc4ab;
+  --color-green-2: #b1d5c2;
+  --color-green-3: #cce4c3;
+  --color-light-yellow: #f0ebc8;
+  padding: 2rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 40%;
+  height: 30%;
+  color: var(--color-green-1);
+  font-size: 2.2rem;
+}
+
+.wrapper > * {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 5.2rem;
+  letter-spacing: 0.6rem;
+}
+
+.sub-title {
+  font-size: 3.2rem;
+  letter-spacing: 0.4rem;
+}
+
+.footer {
+  position: fixed;
+  right: 4rem;
+  bottom: 5rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.github {
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: var(--color-green-1);
+  margin-right: 1.4rem;
+}
+
+.linkedin {
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: var(--color-green-1);
+  margin-right: 20px;
+}
+
+.redirect-btn {
+  text-decoration: none;
+  color: var(--color-green-2);
+  font-size: 2.6rem;
+  font-weight: 900;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+.redirect-btn:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.redirects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.redirect-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--color-green-2);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 1;
+  transform: translate(-100%, 0);
+}
